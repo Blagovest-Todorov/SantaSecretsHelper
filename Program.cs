@@ -21,8 +21,7 @@ namespace SantaSecretHelper
                 string encrypted = Console.ReadLine();
 
                 if (encrypted == "end" )
-                {
-                    //ToDo
+                {                   
                     break;
                 }
 
@@ -33,7 +32,7 @@ namespace SantaSecretHelper
                     sbMessage.Append((char)(letter - numKey));  //reducing the currLetter and adding it to string
                 }
 
-                string currDecryptedMessage = sbMessage.ToString();  //look for @name onlyletters, !G1 or !N!
+                string currDecryptedMessage = sbMessage.ToString();  
 
                 Match match = regex.Match(currDecryptedMessage);  
                 //We pick up only string with G-> good-> becasue we create List later only with Good ones
